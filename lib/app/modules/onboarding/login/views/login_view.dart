@@ -1,12 +1,13 @@
-import 'package:prevencion_cardiovascular/app/widgets/widgets.dart';
-import 'package:prevencion_cardiovascular/app/utils/utils.dart';
-import '../controllers/login_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
+import 'package:prevencion_cardiovascular/app/modules/onboarding/login/controllers/login_controller.dart';
+import 'package:prevencion_cardiovascular/app/utils/utils.dart';
+import 'package:prevencion_cardiovascular/app/widgets/widgets.dart';
 
 class LoginView extends GetView<LoginController> {
+  const LoginView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +37,7 @@ class LoginView extends GetView<LoginController> {
                       ),
                       children: <TextSpan>[
                         TextSpan(
-                          text: 'RondApp',
+                          text: 'PrevenApp',
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.w900,

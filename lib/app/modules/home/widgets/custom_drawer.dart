@@ -61,7 +61,7 @@ class _LogoHeader extends StatelessWidget {
             padding: const EdgeInsets.only(right: 20),
             child: Center(
               child: Text(
-                'RondApp',
+                'PrevenApp',
                 style: styles.tittleDrawer,
               ),
             ),

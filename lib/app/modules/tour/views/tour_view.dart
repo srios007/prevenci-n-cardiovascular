@@ -1,15 +1,15 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
+import 'package:prevencion_cardiovascular/app/modules/tour/controllers/tour_controller.dart';
+import 'package:prevencion_cardiovascular/app/modules/tour/widgets/labels.dart';
+import 'package:prevencion_cardiovascular/app/modules/tour/widgets/tour_page.dart';
+import 'package:prevencion_cardiovascular/app/utils/utils.dart';
 import 'package:prevencion_cardiovascular/app/widgets/widgets.dart';
 
-import '../../../utils/utils.dart';
-import '../controllers/tour_controller.dart';
-import '../widgets/labels.dart';
-import '../widgets/tour_page.dart';
-
 class TourView extends GetView<TourController> {
+  const TourView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(

@@ -37,21 +37,21 @@ class Labels {
     );
   }
 
-  Widget third() {
+  Widget second() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(36, 0, 36, 22),
       child: RichText(
         textAlign: TextAlign.center,
         text: TextSpan(
-          text: 'Puedes solicitar tu comida ',
+          text: 'En PrevenApp puedes tener todo ',
           style: lightStyle,
           children: <TextSpan>[
             TextSpan(
-              text: 'desde la comodiad de tu casa ',
+              text: 'al alcance de tu mano, tenemos ',
               style: boldStyle,
             ),
             TextSpan(
-              text: 'con la mejor atención que nuestro equipo te puede dar.',
+              text: 'información importante para ti.',
               style: lightStyle,
             ),
           ],
@@ -60,22 +60,21 @@ class Labels {
     );
   }
 
-  Widget second() {
+  Widget third() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(36, 0, 36, 22),
       child: RichText(
         textAlign: TextAlign.center,
         text: TextSpan(
-          text: 'En RondApp puedes tener todo ',
+          text: 'Puedes solicitar información ',
           style: lightStyle,
           children: <TextSpan>[
             TextSpan(
-              text: 'al alcance de tu mano, tenemos ',
+              text: 'desde la comodiad de tu casa ',
               style: boldStyle,
             ),
-            TextSpan(text: 'muchos restaurantes ', style: boldStyle),
             TextSpan(
-              text: 'en los cuales puedas pedir lo que quieras.',
+              text: 'con la mejor atención que nuestro equipo te puede dar.',
               style: lightStyle,
             ),
           ],

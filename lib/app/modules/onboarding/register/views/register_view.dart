@@ -1,14 +1,16 @@
-import 'package:prevencion_cardiovascular/app/utils/utils.dart';
 import 'package:country_code_picker/country_code_picker.dart';
-import '../controllers/register_controller.dart';
-import '../../../../widgets/purple_button.dart';
-import '../../../../widgets/normal_input.dart';
-import '../../../../widgets/email_input.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:prevencion_cardiovascular/app/modules/onboarding/register/controllers/register_controller.dart';
+import 'package:prevencion_cardiovascular/app/utils/utils.dart';
+import 'package:prevencion_cardiovascular/app/widgets/email_input.dart';
+import 'package:prevencion_cardiovascular/app/widgets/normal_input.dart';
+import 'package:prevencion_cardiovascular/app/widgets/purple_button.dart';
 
 class RegisterView extends GetView<RegisterController> {
+  const RegisterView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +40,7 @@ class RegisterView extends GetView<RegisterController> {
                       ),
                       children: <TextSpan>[
                         TextSpan(
-                          text: 'RondApp',
+                          text: 'PrevenApp',
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.w900,
@@ -171,7 +173,7 @@ class RegisterView extends GetView<RegisterController> {
                     ),
                     const SizedBox(height: 20),
                     const Text(
-                      "Sube una imagen para tu perfil de Lizit",
+                      'Sube una imagen para tu perfil de Lizit',
                       style: TextStyle(
                         fontSize: 16,
                       ),
@@ -219,9 +221,8 @@ class RegisterView extends GetView<RegisterController> {
 
 class _PhoneNumberInput extends StatelessWidget {
   const _PhoneNumberInput({
-    Key? key,
     required this.controller,
-  }) : super(key: key);
+  });
 
   final RegisterController controller;
 
@@ -303,9 +304,8 @@ class _PhoneNumberInput extends StatelessWidget {
 
 class _PasswordInput extends StatelessWidget {
   const _PasswordInput({
-    Key? key,
     required this.controller,
-  }) : super(key: key);
+  });
 
   final RegisterController controller;
 
@@ -334,64 +334,6 @@ class _PasswordInput extends StatelessWidget {
           validator: controller.validatePassword,
           controller: controller.passwordController,
           obscureText: !controller.visiblePassword.value,
-        ),
-      ),
-    );
-  }
-}
-
-class _ForgotUser extends StatelessWidget {
-  const _ForgotUser({
-    required this.controller,
-  });
-
-  final RegisterController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 40,
-      child: TextButton(
-        onPressed: controller.recoverUser,
-        style: TextButton.styleFrom(
-          primary: Palette.white,
-        ),
-        child: const Text(
-          '¿Olvidaste tu usuario?',
-          style: TextStyle(
-            color: Palette.purple,
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _ForgotPassword extends StatelessWidget {
-  const _ForgotPassword({
-    required this.controller,
-  });
-
-  final RegisterController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 40,
-      child: TextButton(
-        onPressed: controller.recoverPassword,
-        style: TextButton.styleFrom(
-          primary: Palette.white,
-        ),
-        child: const Text(
-          '¿Olvidaste tu contraseña?',
-          style: TextStyle(
-            color: Palette.purple,
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-          ),
         ),
       ),
     );
