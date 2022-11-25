@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1070171988351",
+    "project_id": "prevencion-cardiovascular",
+    "storage_bucket": "prevencion-cardiovascular.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070171988351:android:e24f2c3d7c9bdee39a3a4a",
+        "android_client_info": {
+          "package_name": "app.ud.prevencion.prevencion_cardiovascular"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070171988351-fi3hin9jl545o0b02dtvr0tnfur4s4m3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGsHrOKrU3SDh1BabJduGmvrmbxQ63A7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070171988351-fi3hin9jl545o0b02dtvr0tnfur4s4m3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

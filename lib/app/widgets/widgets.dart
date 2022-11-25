@@ -1,0 +1,10 @@
+export 'package:prevencion_cardiovascular/app/widgets/email_input.dart';
+export 'package:prevencion_cardiovascular/app/widgets/normal_input.dart';
+export 'package:prevencion_cardiovascular/app/widgets/password_input.dart';
+export 'package:prevencion_cardiovascular/app/widgets/product_card.dart';
+export 'package:prevencion_cardiovascular/app/widgets/purple_button.dart';
+export 'package:prevencion_cardiovascular/app/widgets/purple_outlined_button.dart';
+export 'package:prevencion_cardiovascular/app/widgets/simple_alert.dart';
+export 'package:prevencion_cardiovascular/app/widgets/snackbars.dart';
+export 'package:prevencion_cardiovascular/app/widgets/yellow_button.dart';
+export 'package:prevencion_cardiovascular/app/widgets/yellow_outlined_button.dart';
