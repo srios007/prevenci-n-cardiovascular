@@ -1,32 +1,17 @@
-import 'package:prevencion_cardiovascular/app/utils/utils.dart';
-import '../controllers/home_controller.dart';
-import '../../../routes/app_pages.dart';
 import 'package:flutter/material.dart';
-import '../widgets/custom_drawer.dart';
 import 'package:get/get.dart';
+import 'package:prevencion_cardiovascular/app/modules/home/controllers/home_controller.dart';
+import 'package:prevencion_cardiovascular/app/modules/home/widgets/custom_drawer.dart';
 
 class HomeView extends GetView<HomeController> {
+  const HomeView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
         centerTitle: true,
-        actions: [
-          GestureDetector(
-            onTap: () async {
-              await Get.toNamed(Routes.SHOPPING_CART);
-              controller.getData();
-            },
-            child: const Padding(
-              padding: EdgeInsets.only(right: 10),
-              child: Icon(
-                Icons.shopping_cart,
-                color: Palette.white,
-              ),
-            ),
-          )
-        ],
       ),
       drawer: CustomDrawer(
         contextGlobal: context,
@@ -42,7 +27,7 @@ class HomeView extends GetView<HomeController> {
                     hasScrollBody: false,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: []
+                      children: [],
                     ),
                   )
                 ],
@@ -51,4 +36,3 @@ class HomeView extends GetView<HomeController> {
     );
   }
 }
- 

@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:prevencion_cardiovascular/app/routes/app_pages.dart';
-import '../../../services/services.dart';
-import '../../../utils/utils.dart';
+import 'package:prevencion_cardiovascular/app/services/services.dart';
+import 'package:prevencion_cardiovascular/app/utils/utils.dart';
 
 class CustomDrawer extends StatelessWidget {
-  CustomDrawer({
-    Key? key,
+  const CustomDrawer({
+    super.key,
     required this.contextGlobal,
-  }) : super(key: key);
-  BuildContext contextGlobal;
+  });
+  final BuildContext contextGlobal;
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -47,8 +47,8 @@ class CustomDrawer extends StatelessWidget {
 
 class _LogoHeader extends StatelessWidget {
   const _LogoHeader({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
