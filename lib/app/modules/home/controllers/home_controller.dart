@@ -4,10 +4,9 @@ import 'package:prevencion_cardiovascular/app/services/model_services/health_inf
 import 'package:prevencion_cardiovascular/app/services/services.dart';
 
 class HomeController extends GetxController {
+  List<HealthInfo> healthInfoList = [];
   RxList shoppingCart = [].obs;
-
   RxBool isLoading = false.obs;
-
   User user = User();
 
   @override
@@ -26,23 +25,16 @@ class HomeController extends GetxController {
   /// Trae el usuario que inicia sesión
   getUser() async {
     user = (await userService.getCurrentUser())!;
+    healthInfoList = await healthInfoService.getHealthInfo();
   }
 
-  createInfo() async {
-    final HealthInfo info = HealthInfo(
-      created: DateTime.now(),
-      title: 'Control del estrés, hipertensión y diabetes',
-      label: '''
-      Evitar el consumo de tabaco y sus derivados, así como la exposición al humo de estos productos.
-      
-      Eliminar la ingesta en exceso de bebidas alcohólicas, ya que puede debilitar el músculo cardiaco, causar complicaciones de salud e incluso la muerte.
-      
-      Nunca es muy tarde para dejar de fumar o beber alcohol; ambos contienen sustancias adictivas y perjudiciales para la salud que producen aumento de la frecuencia cardíaca y de la presión arterial, entre otros efectos cardiacos y cerebrovasculares.
-      
-      Pedir ayuda al prestador de salud más cercano para iniciar tratamiento si se desea de dejar de consumir tabaco y/o vapear, al igual que con las bebidas alcohólicas.
-      ''',
-      imageUrl: '',
-    );
-    await healthInfoService.addHealthInfo(info);
-  }
+  // createInfo() async {
+  //   final HealthInfo info = HealthInfo(
+  //     created: DateTime.now(),
+  //     title: 'Mantenga sus niveles de colesterol y triglicéridos bajo control',
+  //     label: '''''',
+  //     imageUrl: '',
+  //   );
+  //   await healthInfoService.addHealthInfo(info);
+  // }
 }

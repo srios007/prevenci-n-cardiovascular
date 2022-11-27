@@ -15,8 +15,10 @@ class HealthInfoService {
 
       if (querySnapshot.docs.isEmpty) return [];
       for (final element in querySnapshot.docs) {
-        final HealthInfo healthInfo =
-            HealthInfo.fromJson(element.data() as Map<String, dynamic>);
+        final HealthInfo healthInfo = HealthInfo.fromJson(
+          element.data() as Map<String, dynamic>,
+          isGet: true,
+        );
         healthInfo.id = element.id;
         healthInfoList.add(healthInfo);
       }
