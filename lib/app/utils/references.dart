@@ -6,7 +6,7 @@ class FirebaseReferences {
   String creditCards = 'creditCards';
   String addresses = 'addresses';
   String constants = 'constants';
-  String healthInfo = 'health_infomration';
+  String healthInfo = 'health_information';
 }
 
 FirebaseReferences firebaseReferences = FirebaseReferences();

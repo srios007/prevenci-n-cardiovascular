@@ -31,7 +31,9 @@ class HealthInfoService {
   Future<bool> addHealthInfo(HealthInfo info) async {
     try {
       connectionStatus.getNormalStatus();
-      await database.addDocument(healthReference, info.toJson());
+      final result = await database.addDocument(healthReference, info.toJson());
+      info.id = result.id;
+      await result.set({...info.toJson(), 'id': result.id});
       return true;
     } catch (e) {
       return false;
