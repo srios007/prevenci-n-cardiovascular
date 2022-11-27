@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:prevencion_cardiovascular/app/modules/home/controllers/home_controller.dart';
 import 'package:prevencion_cardiovascular/app/modules/home/widgets/custom_drawer.dart';
+import 'package:prevencion_cardiovascular/app/widgets/purple_button.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -10,7 +11,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('Página principal'),
         centerTitle: true,
       ),
       drawer: CustomDrawer(
@@ -27,7 +28,12 @@ class HomeView extends GetView<HomeController> {
                     hasScrollBody: false,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [],
+                      children: [
+                        PurpleButton(
+                          isLoading: false.obs,
+                          onPressed: controller.createInfo,
+                        ),
+                      ],
                     ),
                   )
                 ],

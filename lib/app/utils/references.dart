@@ -2,15 +2,11 @@
 class FirebaseReferences {
 // Firebase
   String clients = 'clients';
-  String restaurants = 'restaurants';
   String bankAccounts = 'bankAccounts';
   String creditCards = 'creditCards';
   String addresses = 'addresses';
-  String categories = 'categories';
   String constants = 'constants';
-  String meals = 'meals';
-  String ingredients = 'ingredients';
-  String purchases = 'purchases';
+  String healthInfo = 'health_infomration';
 }
 
 FirebaseReferences firebaseReferences = FirebaseReferences();

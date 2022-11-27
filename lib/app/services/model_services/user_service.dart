@@ -1,21 +1,21 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:prevencion_cardiovascular/app/models/models.dart';
+import 'package:prevencion_cardiovascular/app/models/user_model.dart';
+import 'package:prevencion_cardiovascular/app/services/firebase_services/database_service.dart';
 import 'package:prevencion_cardiovascular/app/services/services.dart';
-import 'package:prevencion_cardiovascular/app/utils/utils.dart'; 
-import '../../models/models.dart';
-import '../../models/user_model.dart';
-import '../firebase_services/database_service.dart';
+import 'package:prevencion_cardiovascular/app/utils/utils.dart';
 
 class UserService {
-  static String userReference = firebaseReferences.clients;
-  static String addressReference = firebaseReferences.addresses;
-
-  static final UserService _instance = UserService._internal();
 
   factory UserService() {
     return _instance;
   }
 
   UserService._internal();
+  static String userReference = firebaseReferences.clients;
+  static String addressReference = firebaseReferences.addresses;
+
+  static final UserService _instance = UserService._internal();
   var firestore = FirebaseFirestore.instance;
 
   //Para paginacion
@@ -53,7 +53,7 @@ class UserService {
 
   Future<bool> update(User user) async {
     try {
-      DocumentReference docRef = database.getDocumentReference(
+      final DocumentReference docRef = database.getDocumentReference(
         collection: userReference,
         documentId: user.id!,
       );
@@ -71,7 +71,7 @@ class UserService {
   ) async {
     try {
       print(documentId);
-      var querySnapshot = await database.getDocument(
+      final querySnapshot = await database.getDocument(
         collection: 'clients',
         documentId: documentId,
       );
@@ -94,7 +94,7 @@ class UserService {
   ) async {
     dynamic userJson;
 
-    var querySnapshot = await database.getCollection(
+    final querySnapshot = await database.getCollection(
       'users',
       'contactInfo.phoneNumber.basePhoneNumber',
       phoneNumber,
@@ -110,9 +110,9 @@ class UserService {
 
   Future<User?> getCurrentUser() async {
     try {
-      var currentFirebaseUser = auth.getCurrentUser();
+      final currentFirebaseUser = auth.getCurrentUser();
       print('UID: ${currentFirebaseUser!.uid}');
-      var user = await getUserDocumentById(
+      final user = await getUserDocumentById(
         currentFirebaseUser.uid,
       );
       if (user == null) {

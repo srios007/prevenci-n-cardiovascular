@@ -21,7 +21,7 @@ class CustomDrawer extends StatelessWidget {
           physics: const ClampingScrollPhysics(),
           padding: EdgeInsets.zero,
           children: <Widget>[
-            const _LogoHeader(),
+            _LogoHeader(),
             _DrawerTile(
               textColor: Palette.white,
               label: 'Perfil',
@@ -46,10 +46,6 @@ class CustomDrawer extends StatelessWidget {
 }
 
 class _LogoHeader extends StatelessWidget {
-  const _LogoHeader({
-    super.key,
-  });
-
   @override
   Widget build(BuildContext context) {
     return DrawerHeader(
@@ -97,16 +93,15 @@ class _LogoHeader extends StatelessWidget {
 }
 
 class _DrawerTile extends StatelessWidget {
-  const _DrawerTile({
+  _DrawerTile({
     required this.label,
     required this.onTap,
     required this.textColor,
-    this.padding,
   });
   final String label;
   final VoidCallback onTap;
   final Color textColor;
-  final EdgeInsets? padding;
+  EdgeInsets? padding;
 
   @override
   Widget build(BuildContext context) {

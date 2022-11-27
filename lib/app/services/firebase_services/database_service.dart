@@ -31,6 +31,11 @@ class Database {
     return firestore.collection(collection).doc(documentId)..delete();
   }
 
+  /// Agrega un documento a una coleccion
+  addDocument(String collection, Map<String, dynamic> data) async {
+    return firestore.collection(collection).add(data);
+  }
+
   /// Crea un id único en firebase
   createId(collection) {
     CollectionReference collRef = firestore.collection(collection);
